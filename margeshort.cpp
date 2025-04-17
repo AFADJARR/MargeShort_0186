@@ -22,7 +22,8 @@ void input()
             cout << "\nMaksimal panjang array adalah 20\n";
         }
     }
- cout << "\n-----------------------------" << endl;
+
+    cout << "\n-----------------------------" << endl;
     cout << "\nInputkan Isi element array" << endl;
     cout << "\n-----------------------------" << endl;
 
@@ -52,7 +53,8 @@ void mergeSort(int low, int high)
     int i = low;  // step 4.a
     int j = mid + 1; // step 4.b
     int k = low;  // step 4.c
- while (i <= mid && j <= high) // step 4.d
+
+    while (i <= mid && j <= high) // step 4.d
     {
         if (arr[i] <= arr[j]) // step 4.d.i
         {
@@ -66,12 +68,14 @@ void mergeSort(int low, int high)
         }
         k++; // step 4.d.ii
     }
-   while (j <= high) // step 4.e
+
+    while (j <= high) // step 4.e
     {
         B[k] = arr[j]; // step 4.e.i
         j++;           // step 4.e.ii
         k = k + 1;
     }
+
     while (i <= mid) // step 4.f
     {
         B[k] = arr[i]; // step 4.f.i
@@ -85,6 +89,7 @@ void mergeSort(int low, int high)
         arr[x] = B[x];
     }
 }
+
 void output()
 {
     cout << "\nData setelah diurutkan (Merge Sort) : ";
@@ -94,12 +99,12 @@ void output()
     }
     cout << endl;
 }
+
 int main()
 {
     input();
     mergeSort(0, n - 1);
-    output();
+    output();
 }
-
 
 
